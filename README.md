@@ -6,15 +6,15 @@ VarIONt is a SNV caller that is trained initially on Ion Torrent PGM data, but i
 
 	$ perl varIONt.pl -i <mpileup file> -o <output format> -m <minumum coverage> -u <usable coverage> -f <alelle frequency> -t <minumum allele fraction> -v
 
--i: input file in pileup format. REQUIRED  
--o: output choices- vcf, pileup, both.  Default: VCF.  
+-i: input file in pileup format. _**REQUIRED**_  
+-o: output choices- vcf, pileup, both.  _**Default: VCF**_.  
 -v: only outputs variants; or else outputs all sites.  
--m: minimum coverage. Default: 20.  
--u: usable coverage (reference plus primary alternate allele).  Default: 30.  
--f: minor allele fraction. Default 0.05 (or 5%).  
--t: min recorded allele fraction. Default 0.03 (or 3%).  
+-m: minimum coverage. _**Default: 20**_.  
+-u: usable coverage (reference plus primary alternate allele).  _**Default: 30**_.  
+-f: minor allele fraction. _**Default 0.05 (or 5%)**_.  
+-t: min recorded allele fraction. _**Default 0.03 (or 3%)**_.  
 
-### Example:
+#### Example:
 	$ perl varIONt.pl -i mypileupfile -o vcf -m 10 -u 20 -f 0.10 -t 0.05
 
 * The output will be in VCF format.  

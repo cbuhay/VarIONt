@@ -6,22 +6,22 @@ VarIONt is a SNV caller that is trained initially on Ion Torrent PGM data, but i
 
 	$ perl varIONt.pl -i <mpileup file> -o <output format> -m <minumum coverage> -u <usable coverage> -f <alelle frequency> -t <minumum allele fraction> -v
 
--i: input file in pileup format. REQUIRED
--o: output choices- vcf, pileup, both.  Default: VCF.
--v: only outputs variants; or else outputs all sites.
--m: minimum coverage. Default: 20.
--u: usable coverage (reference plus primary alternate allele).  Default: 30.
--f: minor allele fraction. Default 0.05 (or 5%).
--t: min recorded allele fraction. Default 0.03 (or 3%).
+-i: input file in pileup format. REQUIRED  
+-o: output choices- vcf, pileup, both.  Default: VCF.  
+-v: only outputs variants; or else outputs all sites.  
+-m: minimum coverage. Default: 20.  
+-u: usable coverage (reference plus primary alternate allele).  Default: 30.  
+-f: minor allele fraction. Default 0.05 (or 5%).  
+-t: min recorded allele fraction. Default 0.03 (or 3%).  
 
-Example:
+### Example:
 	$ perl varIONt.pl -i mypileupfile -o vcf -m 10 -u 20 -f 0.10 -t 0.05
 
-The output will be in VCF format.
-The miniumum read coverage surveyed will be 10X, all sites <10X will not be considered.
-The minimum usable coverage is 20-- the coverage of major + most prevalent minor allele must be ≥20.
-The minor allele fraction which to call a PASS variant is 10%
-The alllele fraction which to consider ANY variant is 5%
+* The output will be in VCF format.  
+* The miniumum read coverage surveyed will be 10X, all sites <10X will not be considered.  
+* The minimum usable coverage is 20-- the coverage of major + most prevalent minor allele must be ≥20.  
+* The minor allele fraction which to call a PASS variant is 10%  
+* The alllele fraction which to consider ANY variant is 5%  
 
 ## Output ##
 
